@@ -28,7 +28,7 @@ public class Runner{
     calcTwo.add(100);
     try {
       calcTwo.divide(0.0);
-    } catch (Exception e) {
+    } catch (DivisionByZeroException e) {
       System.out.println("Division by zero caught");
     }
 
@@ -40,7 +40,7 @@ public class Runner{
     calcThree.add(Calculator.MAX_VALUE);
     try {
       calcThree.add(Calculator.MAX_VALUE / 10e9);
-    } catch (Exception e) {
+    } catch (ValueOverflowException e) {
       System.out.println("Addition overflow caught");
     }
 
@@ -49,7 +49,7 @@ public class Runner{
     calcThree.add(-Calculator.MAX_VALUE);
     try {
       calcThree.add(-Calculator.MAX_VALUE / 10e9);
-    } catch (Exception e) {
+    } catch (ValueOverflowException e) {
       System.out.println("Addition overflow caught");
     }
 
@@ -58,7 +58,7 @@ public class Runner{
     calcThree.subtract(Calculator.MAX_VALUE);
     try {
       calcThree.subtract(Calculator.MAX_VALUE / 10e9);
-    } catch (Exception e) {
+    } catch (ValueOverflowException e) {
       System.out.println("Subtraction overflow caught");
     }
 
@@ -67,7 +67,7 @@ public class Runner{
     calcThree.subtract(-Calculator.MAX_VALUE);
     try {
       calcThree.subtract(-Calculator.MAX_VALUE / 10e9);
-    } catch (Exception e) {
+    } catch (ValueOverflowException e) {
       System.out.println("Subtraction overflow caught");
     }
 
@@ -76,7 +76,7 @@ public class Runner{
     calcThree.add(Calculator.MAX_VALUE);
     try {
       calcThree.multiply(1.01);
-    } catch (Exception e) {
+    } catch (ValueOverflowException e) {
       System.out.println("Multiplication overflow caught");
     }
   }
