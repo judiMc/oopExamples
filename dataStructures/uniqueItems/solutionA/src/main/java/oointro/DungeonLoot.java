@@ -22,7 +22,26 @@ public class DungeonLoot {
     }
 
     public void removeLoot(String name){
-        storeLoot.removeIf(loot -> loot.getName() == name);
+        // Option 1: Iterate with for loop to find item, then use remove method
+        List<Loot> allItems = new ArrayList<>(storeLoot);
+        Loot itemToRemove = null;
+
+        for (Loot item : allItems) {
+            if (item.getName() == name) {
+                itemToRemove = item;
+                break;
+            }
+        }
+        
+        if (itemToRemove != null) {
+            storeLoot.remove(itemToRemove);
+        }
+
+        // Option 2: Pass a lambda function to the removeIf method that runs on all
+        //           items of the list.
+        //           Items will be removed from the list when the function returns true.
+        //
+        // storeLoot.removeIf(loot -> loot.getName() == name);
     }
 
     public void printSortedLoot(){
