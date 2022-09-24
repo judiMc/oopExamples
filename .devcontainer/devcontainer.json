@@ -31,6 +31,7 @@
 		}
 	},
 	"containerEnv": {
+		"JAVA_HOME": "/usr/lib/jvm/msopenjdk-current",
 		"GRADLE_USER_HOME": "${localEnv:HOME}"
 	},
 
