@@ -1,5 +1,4 @@
 package oointro;
-import java.util.*;
 
 public class Runner {
 

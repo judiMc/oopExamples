@@ -13,13 +13,11 @@ public class Frankenstein {
     }
 
     public Frankenstein(Song song) {
-        frankenSong = song;
-        frankenPet = new Pet();
+        this(song, new Pet());
     }
 
-    public Frankenstein(Pet p) {
-        frankenSong = new Song();
-        frankenPet = p;
+    public Frankenstein(Pet pet) {
+        this(new Song(), pet);
     }
 
     public Frankenstein(Song s, Pet p) {
@@ -64,7 +62,11 @@ public class Frankenstein {
 
     private void setAlphaAvg() {
         int totalAggStrings = 5;
-        String mergeStrings = frankenPet.getFoodType() + frankenPet.getName() + frankenPet.getAnimalType() + frankenSong.getTitle() + frankenSong.getArtist();
+        String mergeStrings = frankenPet.getFoodType() 
+                              + frankenPet.getName() 
+                              + frankenPet.getAnimalType() 
+                              + frankenSong.getTitle() 
+                              + frankenSong.getArtist();
 
         alphaAvg = mergeStrings.length() / totalAggStrings;
     }
