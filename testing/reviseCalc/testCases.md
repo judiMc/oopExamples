@@ -32,7 +32,7 @@
 ## squareRoot
 | Category | specific test case| Expected result
 |---|---|---|
-|positive numbers | `sqrt 14` | `7` |
+|positive numbers | `sqrt 49` | `7` |
 |negative numbers | `sqrt -4` | `0` |
 |square root of zero | `sqrt 0` | `0` |
 |positive number < 1 | `sqrt 0.01` | `0` |
