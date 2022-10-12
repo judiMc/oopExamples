@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+task run;
+run.doFirst {
+    println "To run the program:\njava -cp build/classes/java/main Runner"
+}
